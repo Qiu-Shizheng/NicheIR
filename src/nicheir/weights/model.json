@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "architecture": "NicheIR",
+  "width": 32,
+  "solver_steps": 48,
+  "parameters": 2917,
+  "seed": 42,
+  "radius_um": 72,
+  "classes": [
+    "immune",
+    "endothelial",
+    "stroma",
+    "epithelial"
+  ],
+  "sha256": "a801887bec92ae4a4ecc8a7fad0f02b23f60dd29f9d9260543fc9c8ee95cb155"
+}

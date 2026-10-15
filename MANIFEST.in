@@ -1,0 +1,6 @@
+include LICENSE README.md
+recursive-include docs *.md
+recursive-include examples *.py
+recursive-include tests *.py
+recursive-include src/nicheir *.py py.typed *.json *.pt
+recursive-include ci *.yml

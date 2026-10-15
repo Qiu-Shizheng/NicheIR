@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nicheir"
+version = "0.1.1"
+description = "Reconstruct cell-type composition near known spatial acquisition boundaries"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "NicheIR contributors"}]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "torch>=2.1"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Bio-Informatics", "Operating System :: OS Independent"]
+
+[project.urls]
+Repository = "https://github.com/Qiu-Shizheng/NicheIR"
+Documentation = "https://github.com/Qiu-Shizheng/NicheIR/tree/main/docs"
+Issues = "https://github.com/Qiu-Shizheng/NicheIR/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+build = ["build>=1", "wheel"]
+
+[project.scripts]
+nicheir = "nicheir.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nicheir = ["py.typed", "weights/*.pt", "weights/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
